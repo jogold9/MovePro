@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+
+                tools:context=".MainActivity"
+                android:background="@drawable/ancient_art">
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alarmTimePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/buttons"
+        android:alpha="0.50"
+        android:timePickerMode="spinner"
+        />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alarmTimePicker"
+        android:layout_alignLeft="@+id/alarmTimePicker"
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttons"
+        android:alpha="0.50"
+        android:id="@+id/alarmToggle"
+        android:onClick="onToggleClicked"
+        android:checked="false"
+        android:textOff=" Reminders: Off "
+        android:textOn=" Reminders: On "
+        android:textAllCaps="false"
+
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttons"
+            android:alpha="0.50"
+            android:text="Settings"
+
+            android:textAllCaps="false"
+            android:id="@+id/settingsButton"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/buttons"
+        android:alpha="0.50"
+        android:text="Exit"
+
+        android:textAllCaps="false"
+        android:id="@+id/exitButton"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"/>
+
+
+</RelativeLayout>
