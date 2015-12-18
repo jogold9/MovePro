@@ -39,7 +39,6 @@
         android:textOff=" Reminders: Off "
         android:textOn=" Reminders: On "
         android:textAllCaps="false"
-
         android:layout_marginRight="5dp"
         android:layout_weight="1"
         android:layout_marginBottom="5dp"/>
@@ -49,7 +48,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/buttons"
             android:alpha="0.50"
-            android:text="Settings"
+            android:text=" Settings "
 
             android:textAllCaps="false"
             android:id="@+id/settingsButton"

@@ -12,12 +12,13 @@
         android:alpha="0.50"
         android:text="Lorem Ipsum"
         android:id="@+id/doThisThing"
-        android:textAllCaps="false"
         android:textSize="20dp"
+        android:textAllCaps="false"
         android:padding="10dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/black"/>
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +37,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/buttons"
         android:alpha="0.50"
-        android:text="Cancel All Reminders"
+        android:text=" Cancel All Reminders "
         android:textAllCaps="false"
         android:id="@+id/cancelAllButton"
         android:layout_above="@+id/exitButton"

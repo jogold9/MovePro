@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/buttons"
             android:alpha="0.50"
-            android:text="Settings"
+            android:text=" Settings "
             android:textAllCaps="false"
             android:id="@+id/settingsButton"
             />
