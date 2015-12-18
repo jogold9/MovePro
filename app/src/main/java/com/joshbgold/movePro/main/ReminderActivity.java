@@ -12,12 +12,16 @@ import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.joshbgold.movePro.R;
 import com.joshbgold.movePro.backend.AlarmReceiver;
 import com.joshbgold.movePro.content.Moves;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 
 public class ReminderActivity extends Activity {
@@ -27,18 +31,20 @@ public class ReminderActivity extends Activity {
     private StringBuilder movesString = new StringBuilder();
     private static PendingIntent pendingIntent;
     private float volume = (float) 0.5;
-    //Context context = getApplicationContext();
+    String name = "Josh";
+    Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminder);
 
+        mContext = getApplicationContext();
         movesAndQuotesTextView = (TextView) findViewById(R.id.doThisThing);
         final Button cancelButton = (Button) findViewById(R.id.cancelAllButton);
         final Button exitButton = (Button) findViewById(R.id.exitButton);
         final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.drawable.om_mani_short); //used to play mp3 audio file
-
+        final CheckBox checkbox = (CheckBox) findViewById(R.id.completedCheckbox);
 
         //vibrate the device for 1/2 second if the device is capable
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -64,6 +70,14 @@ public class ReminderActivity extends Activity {
         Moves moveObject = new Moves();
         movesString = moveObject.getMoves();
         movesAndQuotesTextView.setText(movesString);
+
+        //Sent email with time stamp if user marks rehab as completed
+        View.OnClickListener completedCheckbox = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendEmail();
+            }
+        };
 
         //cancel all alarms
         View.OnClickListener cancelAll = new View.OnClickListener() {
@@ -106,12 +120,25 @@ public class ReminderActivity extends Activity {
             }
         };
 
+        checkbox.setOnClickListener(completedCheckbox);
         cancelButton.setOnClickListener(cancelAll);
         exitButton.setOnClickListener(quitApp);
     }
 
+    private void sendEmail() {
+        String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
+        //String emailDestinations[] = { "info@bridgetownpt.com" };
+        String emailDestinations[] = { "mhatfield@bridgetownpt.com, gheadley@bridgetownpt.com" };
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setType("plain/text");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, emailDestinations);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Rehab completed");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "At " + currentDateTimeString + " I did these things: " + movesString);
+        startActivity(Intent.createChooser(emailIntent, "Send your email in:"));
+    }
+
     //get prefs
-    private float loadPrefs(String key, float value){
+    private float loadPrefs(String key, float value) {
         SharedPreferences sharedPreferences = getSharedPreferences("MoveAppPrefs", Context.MODE_PRIVATE);
         return sharedPreferences.getFloat(key, value);
     }
