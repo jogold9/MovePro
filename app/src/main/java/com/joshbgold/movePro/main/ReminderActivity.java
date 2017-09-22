@@ -43,7 +43,7 @@ public class ReminderActivity extends Activity {
         movesAndQuotesTextView = (TextView) findViewById(R.id.doThisThing);
         final Button cancelButton = (Button) findViewById(R.id.cancelAllButton);
         final Button exitButton = (Button) findViewById(R.id.exitButton);
-        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.drawable.om_mani_short); //used to play mp3 audio file
+        final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.om_mani_short); //used to play mp3 audio file
         final CheckBox checkbox = (CheckBox) findViewById(R.id.completedCheckbox);
 
         //vibrate the device for 1/2 second if the device is capable

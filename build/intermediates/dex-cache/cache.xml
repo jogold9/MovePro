@@ -2,32 +2,22 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\joshg\AndroidStudioProjects\Move Pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\joshg\AndroidStudioProjects\Move Pro\app\build\intermediates\pre-dexed\release\classes-3f5839ab15614d0662ef5d432d22e7ded177248e.jar" />
+        is-multidex="true"
+        jar="D:\Users\joshg\AndroidStudioProjects\Move Pro\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="D:\Users\joshg\AndroidStudioProjects\Move Pro\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_719043de83e92f31e8c6c81f53047dc5a0857f5c\classes.dex" />
     </item>
     <item
-        jar="C:\Users\joshg\AndroidStudioProjects\Move Pro\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\joshg\AndroidStudioProjects\Move Pro\app\build\intermediates\pre-dexed\release\internal_impl-23.0.1-7a69037c5af2255070e4efd940b7e760808f5914.jar" />
-    </item>
-    <item
-        jar="C:\Users\joshg\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\joshg\AndroidStudioProjects\Move Pro\app\build\intermediates\pre-dexed\release\support-annotations-23.0.1-a4a8abc9db2c9bb2c02d935fb19813ca3ec74c1a.jar" />
-    </item>
-    <item
-        jar="C:\Users\joshg\AndroidStudioProjects\Move Pro\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\Users\joshg\AndroidStudioProjects\Move Pro\app\build\intermediates\pre-dexed\release\classes-53c8e713231a2cc19d6a9ff39c8c55d1e5ad2421.jar" />
+        is-multidex="true"
+        jar="D:\Users\joshg\AndroidStudioProjects\Move Pro\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="664ebbcb7e9259a634785170ce6742d24cb47b45">
+        <dex dex="D:\Users\joshg\AndroidStudioProjects\Move Pro\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_0812ab8b6679b2eab15eee23be97d634dfeb1f6f\classes.dex" />
     </item>
 
 </items>

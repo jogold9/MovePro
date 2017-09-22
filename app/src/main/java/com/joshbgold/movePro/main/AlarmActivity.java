@@ -91,7 +91,7 @@ public class AlarmActivity extends Activity {
     }
 
     private void playAudio() {
-        mediaPlayer = MediaPlayer.create(this, R.drawable.om_mani_short);
+        mediaPlayer = MediaPlayer.create(this, R.raw.om_mani_short);
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
             @Override
